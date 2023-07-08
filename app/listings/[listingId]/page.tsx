@@ -3,7 +3,7 @@ import EmptyState from '@/app/components/EmptyState';
 import React from 'react'
 import ClientOnly from '@/app/components/ClientOnly';
 import getCurrentUser from '@/app/actions/getCurrentUser';
-import ListingClient from './ListingClient';
+import ListingClient from '../../components/listings/ListingClient';
 import getReservations from '@/app/actions/getReservations';
 
 interface IParams {
