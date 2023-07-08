@@ -1,0 +1,15 @@
+We use mostly dynamic function from next/dynamic in our codes such like :- 
+
+const Map = dynamic(() => import('../Map'), {
+    ssr: false  
+});
+
+Explanation :- 
+ 
+ The purpose of using dynamic in this context is to enable code splitting and lazy loading of the Map component. Code splitting is a technique that allows bundling JavaScript code into smaller chunks, which are then loaded on-demand when they are needed. This can improve the initial load time of the application by reducing the size of the initial bundle.
+
+The dynamic function is typically used in Next.js, a popular React framework, to enable dynamic imports and code splitting. By default, Next.js performs server-side rendering (SSR), which means that components are rendered on the server and sent to the client as HTML. However, in this case, the ssr option is set to false, indicating that the Map component should not be rendered on the server but should be loaded and rendered on the client-side only.
+
+By using dynamic with ssr: false, the Map component will not be included in the initial server-rendered HTML, but it will be dynamically loaded and rendered when it is required on the client-side, such as when a user interacts with a specific part of the application that requires the Map component.
+
+This approach can help optimize the performance of the application by loading components only when they are needed, reducing the initial load time and improving the user experience.
